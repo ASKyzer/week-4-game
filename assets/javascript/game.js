@@ -7,11 +7,11 @@ $(document).ready(function(){
 var wins = 0;
 var losses = 0;
 var totalValue = 0;
-var randomNum;
-var batzValue;
-var kittyValue;
-var penguinValue;
-var keroppiValue;
+var numToReach;
+var batzValue = "";
+var kittyValue = "";
+var penguinValue = "";
+var keroppiValue = "";
 
 ////////////////
 // Functions //
@@ -25,14 +25,15 @@ function startGame(){
   //random number from 19-120 generated
   function randomNum(min,max){
 
-    return Math.floor(Math.random()*(max-min+1)+min);
+    numToReach = Math.floor(Math.random()*(max-min+1)+min);
+    $('#numToReach').html(numToReach);
   }
   randomNum(19,120);
 
   //random values are assigned to characters between 1-12//
   function randomBatzValue(min,max){
     // random batz value
-    return Math.floor(Math.random()*(max-min+1)+min);
+    return Math.floor(Math.random()*(max-min+1)+min);d
   }
   randomBatzValue(1,12);
 
@@ -60,6 +61,22 @@ function startGame(){
 // playing the game
 
 // click on a charactor to get random values
+$("#batz").on("click", function(){
+
+});
+
+$("#kitty").on("click", function(){
+
+});
+
+$("#penguin").on("click", function(){
+
+});
+
+$("#keroppi").on("click", function(){
+
+});
+
 
 // that value is then printed on the screen
 
@@ -77,16 +94,21 @@ function startGame(){
 function reset(){
   totalValue = 0;
   randomNum();
+  randomBatzValue();
+  randomKittyValue();
+  randomPenguinValue();
+  randomKeroppiValue();
 }
+
 ////////////////////
 // FOR DEBUGGING //
 //////////////////
+
 console.log(randomNum(19,120));
 console.log(randomBatzValue(1,12));
 console.log(randomKittyValue(1,12));
 console.log(randomPenguinValue(1,12));
 console.log(randomKeroppiValue(1,12));
-
 
 
 });
