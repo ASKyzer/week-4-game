@@ -52,7 +52,7 @@ var runningTotal = 0;
 function compareScore() {
   if (runningTotal == numToReach) {
     alert("Congratulations!  You've won this round.");
-    win++;
+    wins++;
     $('#wins').html(wins);
     restart();
   }
@@ -68,25 +68,25 @@ function compareScore() {
 
 // click on a charactor to get random values //
 $("#batz").on("click", function(){
-  runningTotal = runningTotal+batzValue;
+  runningTotal = runningTotal + batzValue;
   $('#yourTotal').html(runningTotal);  // outputs to DOM
   compareScore();
 })
 
 $("#kitty").on("click", function(){
-  runningTotal = runningTotal+kittyValue;
+  runningTotal = runningTotal + kittyValue;
   $('#yourTotal').html(runningTotal);
   compareScore();
 })
 
 $("#penguin").on("click", function(){
-  runningTotal = runningTotal+penguinValue;
+  runningTotal = runningTotal + penguinValue;
   $('#yourTotal').html(runningTotal);
   compareScore();
 })
 
 $("#keroppi").on("click", function(){
-  runningTotal = runningTotal+keroppiValue;
+  runningTotal = runningTotal + keroppiValue;
   $('#yourTotal').html(runningTotal);
   compareScore();
 })
