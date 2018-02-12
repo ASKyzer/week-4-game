@@ -19,6 +19,7 @@ var maxCharNum = 12;
 // ninimum and maximum computer values
 var minCompNum = 19;
 var maxCompNum = 120;
+// to keep a log of
 var runningTotal = 0;
 
 // When the game starts, all the values are randomly generated but only the score to match is shown
@@ -33,8 +34,14 @@ var runningTotal = 0;
   penguinValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
   keroppiValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
 
+////////////////
+// FUNCTIONS //
+//////////////
+
 // to set all variables back to zero
   function restart(){
+
+    $('#yourTotal').html("Your Total");
 
     totalValue = 0;
     runningTotal = 0;
@@ -46,6 +53,17 @@ var runningTotal = 0;
     kittyValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
     penguinValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
     keroppiValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+
+    ///////////////////
+    // FOR DEBUGGING //
+    //////////////////
+
+    console.log(numToReach);
+    console.log(batzValue);
+    console.log(kittyValue);
+    console.log(penguinValue);
+    console.log(keroppiValue);
+
   };
 
 // Comparing the score to see who Wins
@@ -64,35 +82,37 @@ function compareScore() {
     }
 };
 
-// playing the game
+//////////////////////
+// PLAYING THE GAME //
+/////////////////////
 
-// click on a charactor to get random values //
-$("#batz").on("click", function(){
-  runningTotal = runningTotal + batzValue;
-  $('#yourTotal').html(runningTotal);  // outputs to DOM
-  compareScore();
-})
+  // click on a charactor to get random values //
+  $("#batz").on("click", function(){
+    // adds the value of the character to the new total
+    runningTotal = runningTotal + batzValue;
+    // outputs to DOM
+    $('#yourTotal').html(runningTotal);
+    // calls on the function to evaluate win or loss
+    compareScore();
+  })
+  // the events below are the same as described above
+  $("#kitty").on("click", function(){
+    runningTotal = runningTotal + kittyValue;
+    $('#yourTotal').html(runningTotal);
+    compareScore();
+  })
 
-$("#kitty").on("click", function(){
-  runningTotal = runningTotal + kittyValue;
-  $('#yourTotal').html(runningTotal);
-  compareScore();
-})
+  $("#penguin").on("click", function(){
+    runningTotal = runningTotal + penguinValue;
+    $('#yourTotal').html(runningTotal);
+    compareScore();
+  })
 
-$("#penguin").on("click", function(){
-  runningTotal = runningTotal + penguinValue;
-  $('#yourTotal').html(runningTotal);
-  compareScore();
-})
-
-$("#keroppi").on("click", function(){
-  runningTotal = runningTotal + keroppiValue;
-  $('#yourTotal').html(runningTotal);
-  compareScore();
-})
-
-
-
+  $("#keroppi").on("click", function(){
+    runningTotal = runningTotal + keroppiValue;
+    $('#yourTotal').html(runningTotal);
+    compareScore();
+  })
 
 ////////////////////
 // FOR DEBUGGING //
