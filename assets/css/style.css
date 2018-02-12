@@ -5,8 +5,16 @@ body {
   background-size: cover;
 }
 
+.container {
+  height: 100wh;
+}
+
 .card {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-header {
+  background-color: rgba(255,211,61,0.5);
 }
 
 .card-header p {
@@ -17,10 +25,22 @@ body {
 }
 
 .score-row {
-  height: 200px;
-  border: 1px solid black;
+  height: auto;
+}
+
+.score-header {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 15px;
 }
 
 .score {
+  background-color: rgba(255,211,61,0.5);
+  border: 1px solid #ffd33d;
+  border-radius: 50%;
   font-size: 55px;
+  height: 120px;
+  line-height: 120px;
+  width: 120px;
+
 }

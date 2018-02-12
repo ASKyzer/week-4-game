@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>week-4-game</title>
+    <title>Pokemon Collector (week-4-game)</title>
   </head>
 
   <body>
@@ -27,22 +27,23 @@
       </div>
       <div class="row">
         <div class="col-sm-12 col-md-7 col-lg-9 mt-5 mb-5 rules-col">
-          <div class="card">
+          <div class="card rules-card">
             <div class="card-header pb-0">
               <p>Rules</p>
             </div>
             <div class="card-body">
-              <p class="rules">You will be given a random number at the start of the game.
+              <p class="rules">
+                You will be given a random number at the start of the game.
                 <br><br>
-                There are four Sanrio characters below.  By clicking on a character, you will add a specific amount of points to your total score.
+                There are four Pokemon characters below.  By clicking on a character, you will add a specific amount of points to your total score.
                 <br><br>
                 You win the game by matching your total score to the random number.  You lose if your score goes above that number.
                 <br><br>
-                The value of each crystal is hidden from you until you click on it.
+                The value of each monster is hidden from you until you click on it.
                 <br><br>
-                Each time when the game starts, the game will change the value of each character.
+                Each time when the game starts, the game will change the value of each monster.
                 <br><br>
-                Enjoy the game!
+                Enjoy the game and go catch 'em all!
               </p>
             </div>
           </div>
@@ -53,43 +54,37 @@
       </div>
       <div class="row score-row">
         <div  class="col to-collect-col" align=center>
-          <p>Wins:</p>
+          <p class="score-header">Wins:</p>
           <p id="wins" class="score"></p>
         </div>
         <div  class="col to-collect-col" align=center>
-          <p class="score-header">Number to collect:</p>
-          <p id="ranNum" class="score"></p>
-        </div>
-        <div  class="col your-score-col" align=center>
-          <p class="score-header">Total collected:</p>
-          <p id="yourTotal" class="score">0</p>
+          <p class="score-header">To collect:</p>
+          <p id="monstersToCollect" class="score"></p>
         </div>
         <div  class="col to-collect-col" align=center>
-          <p>Losses:</p>
+          <p class="score-header">Total collected:</p>
+          <p id="totalMonsters" class="score">0</p>
+        </div>
+        <div  class="col to-collect-col" align=center>
+          <p class="score-header">Losses:</p>
           <p id="losses" class="score"></p>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <img id="batz" class="img img-responsive img-fluid pokemon-pic" src="assets/images/dragon.png" alt="Batz Maru">
+          <img id="dragon" class="img img-responsive img-fluid pokemon-pic" src="assets/images/dragon.png" alt="Dragon">
         </div>
         <div class="col">
-          <img id="kitty" class="img img-responsive img-fluid pokemon-pic" src="assets/images/wartortle.png" alt="Hello Kitty">
+          <img id="wartortle" class="img img-responsive img-fluid pokemon-pic" src="assets/images/wartortle.png" alt="Wartortle">
         </div>
         <div class="col">
-          <img id="penguin" class="img img-responsive img-fluid pokemon-pic" src="assets/images/banette.png" alt="Penguin">
+          <img id="banette" class="img img-responsive img-fluid pokemon-pic" src="assets/images/banette.png" alt="Banette">
         </div>
         <div class="col">
-          <img id="keroppi" class="img img-responsive img-fluid pokemon-pic" src="assets/images/cobra.png" alt="Keroppi">
+          <img id="kobra" class="img img-responsive img-fluid pokemon-pic" src="assets/images/cobra.png" alt="Kobra">
         </div>
       </div>
     </div>
-
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
