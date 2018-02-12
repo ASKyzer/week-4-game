@@ -8,10 +8,18 @@ var wins = 0;
 var losses = 0;
 var totalValue = 0;
 var numToReach;
-var batzValue = "";
-var kittyValue = "";
-var penguinValue = "";
-var keroppiValue = "";
+// values of each character
+var batzValue;
+var kittyValue;
+var penguinValue;
+var keroppiValue;
+// ninimum and maximum character values
+var minCharNum = 1;
+var maxCharNum = 12;
+// ninimum and maximum computer values
+var minCompNum = 19;
+var maxCompNum = 120;
+var runningTotal = 0;
 
 ////////////////
 // Functions //
@@ -23,62 +31,58 @@ function startGame(){
 
 }
   //random number from 19-120 generated
-  function randomNum(min,max){
 
-    numToReach = Math.floor(Math.random()*(max-min+1)+min);
-    $('#numToReach').html(numToReach);
+  numToReach = Math.floor(Math.random()*(maxCompNum-minCompNum+1)+minCompNum);
+    // that value is then printed on the screen
+  $('#ranNum').html(numToReach);
+
+  batzValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+
+  kittyValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+
+  penguinValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+
+  keroppiValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+
+// to set everything back to zero
+  function restart(){
+    totalValue = 0;
+    runningTotal = 0;
+    numToReach = 0;
   }
-  randomNum(19,120);
-
-  //random values are assigned to characters between 1-12//
-  function randomBatzValue(min,max){
-    // random batz value
-    return Math.floor(Math.random()*(max-min+1)+min);d
-  }
-  randomBatzValue(1,12);
-
-  function randomKittyValue(min,max){
-    // random kitty value
-    return Math.floor(Math.random()*(max-min+1)+min);
-  }
-  randomKittyValue(1,12);
-
-  function randomPenguinValue(min,max){
-    // random penguin value
-    return Math.floor(Math.random()*(max-min+1)+min);
-  }
-  randomPenguinValue(1,12);
-
-  function randomKeroppiValue(min,max){
-    // random keroppivalue
-    return Math.floor(Math.random()*(max-min+1)+min);
-  }
-  randomKeroppiValue(1,12);
-
-  //your sum is set to zero
-
-
 // playing the game
 
 // click on a charactor to get random values
 $("#batz").on("click", function(){
-
-});
+  runningTotal = runningTotal+batzValue;
+  $('#yourTotal').html(runningTotal);
+})
 
 $("#kitty").on("click", function(){
-
-});
+  runningTotal = runningTotal+kittyValue;
+  $('#yourTotal').html(runningTotal);
+})
 
 $("#penguin").on("click", function(){
-
-});
+  runningTotal = runningTotal+penguinValue;
+  $('#yourTotal').html(runningTotal);
+})
 
 $("#keroppi").on("click", function(){
+  runningTotal = runningTotal+keroppiValue;
+  $('#yourTotal').html(runningTotal);
+})
 
-});
+function scoreComparison() {
+  if ( runningTotal === numToReach) {
+    win++;
+    $('#wins').html(wins);
+    restart();
+  }
+}
 
 
-// that value is then printed on the screen
+
 
 // click on another character to get another random values
 
@@ -87,28 +91,34 @@ $("#keroppi").on("click", function(){
 // if totalValue is less than randomNum, the game continues
 
 // if totalValue is greater than randomNum, the game ends and losses++
+function evaluateScores() {
+    if (totalValue > numToReach) {
+      losses++;
+      alert("Better luck next time.")
+      restart();
+    }
+  }
 
 // if totalValue === randomNum, win++
+    if (totalValue === numToReach) {
+      wins++;
+      alert("Congratulations!  You've won.");
+      restart();
+    }
+    // when total value exceeds the random number
 
 // when you win or lose, the game resets, but the wins and losses don't clear
-function reset(){
-  totalValue = 0;
-  randomNum();
-  randomBatzValue();
-  randomKittyValue();
-  randomPenguinValue();
-  randomKeroppiValue();
-}
+
 
 ////////////////////
 // FOR DEBUGGING //
 //////////////////
 
-console.log(randomNum(19,120));
-console.log(randomBatzValue(1,12));
-console.log(randomKittyValue(1,12));
-console.log(randomPenguinValue(1,12));
-console.log(randomKeroppiValue(1,12));
+console.log(numToReach);
+console.log(batzValue);
+console.log(kittyValue);
+console.log(penguinValue);
+console.log(keroppiValue);
 
 
 });
