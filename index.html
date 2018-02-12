@@ -21,56 +21,66 @@
 
     <div class="container">
       <div class="row">
-        <div class="col">
-          <h1>Sanrio Collector</h1>
+        <div class="col" align=center>
+          <h1> <img src="assets/images/title.gif" alt="Pokemon Logo"></h1>
         </div>
       </div>
       <div class="row">
-        <div class="col rules-col">
-          <p>You will be given a rando number at the start of the game.
-            <br><br>
-            There are four Sanrio characters below.  By clicking on a character, you will add a specific amount of points to your total score.
-            <br><br>
-            You win the game by matching your total score to the random number.  You lose if your score goes above that number.
-            <br><br>
-            The value of each crystal is hidden from you until you click on it.
-            <br><br>
-            Each time when the game starts, the game will change the value of each character.
-            <br><br>
-            Enjoy the game!
-          </p>
+        <div class="col-sm-12 col-md-7 col-lg-9 mt-5 mb-5 rules-col">
+          <div class="card">
+            <div class="card-header pb-0">
+              <p>Rules</p>
+            </div>
+            <div class="card-body">
+              <p class="rules">You will be given a random number at the start of the game.
+                <br><br>
+                There are four Sanrio characters below.  By clicking on a character, you will add a specific amount of points to your total score.
+                <br><br>
+                You win the game by matching your total score to the random number.  You lose if your score goes above that number.
+                <br><br>
+                The value of each crystal is hidden from you until you click on it.
+                <br><br>
+                Each time when the game starts, the game will change the value of each character.
+                <br><br>
+                Enjoy the game!
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <p>Wins: <span id="wins"></span></p>
-        </div>
-        <div class="col">
-          <p>Losses: <span id="losses"></span></p>
+        <div class="col-sm-12 col-md-5 col-lg-3 mt-3 pt-5" align=center >
+          <img class="img img-fluid img-responsive" src="assets/images/pika.png" alt="Picachew">
         </div>
       </div>
       <div class="row score-row">
-        <div  class="col to-collect-col">
-          <p class="score-header">Number to collect:</p>
-          <p id="ranNum" class="score">33</p>
+        <div  class="col to-collect-col" align=center>
+          <p>Wins:</p>
+          <p id="wins" class="score"></p>
         </div>
-        <div  class="col your-score-col">
-          <p class="score-header">Your total score collected:</p>
-          <p id="yourTotal" class="score">Your Total</p>
+        <div  class="col to-collect-col" align=center>
+          <p class="score-header">Number to collect:</p>
+          <p id="ranNum" class="score"></p>
+        </div>
+        <div  class="col your-score-col" align=center>
+          <p class="score-header">Total collected:</p>
+          <p id="yourTotal" class="score">0</p>
+        </div>
+        <div  class="col to-collect-col" align=center>
+          <p>Losses:</p>
+          <p id="losses" class="score"></p>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <img id="batz" class="img img-responsive img-fluid sanrio-pic" src="assets/images/batz.png" alt="Batz Maru">
+          <img id="batz" class="img img-responsive img-fluid pokemon-pic" src="assets/images/dragon.png" alt="Batz Maru">
         </div>
         <div class="col">
-          <img id="kitty" class="img img-responsive img-fluid sanrio-pic" src="assets/images/kitty.png" alt="Hello Kitty">
+          <img id="kitty" class="img img-responsive img-fluid pokemon-pic" src="assets/images/wartortle.png" alt="Hello Kitty">
         </div>
         <div class="col">
-          <img id="penguin" class="img img-responsive img-fluid sanrio-pic" src="assets/images/penguin.png" alt="Penguin">
+          <img id="penguin" class="img img-responsive img-fluid pokemon-pic" src="assets/images/banette.png" alt="Penguin">
         </div>
         <div class="col">
-          <img id="keroppi" class="img img-responsive img-fluid sanrio-pic" src="assets/images/keroppi.png" alt="Keroppi">
+          <img id="keroppi" class="img img-responsive img-fluid pokemon-pic" src="assets/images/cobra.png" alt="Keroppi">
         </div>
       </div>
     </div>

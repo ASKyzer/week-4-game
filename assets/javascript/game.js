@@ -41,7 +41,7 @@ var runningTotal = 0;
 // to set all variables back to zero
   function restart(){
 
-    $('#yourTotal').html("Your Total");
+    $('#yourTotal').html("0");
 
     totalValue = 0;
     runningTotal = 0;

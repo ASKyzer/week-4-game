@@ -1,9 +1,19 @@
 
+body {
+  background-image: url(../images/pokemon-bg.png);
+  background-position: center;
+  background-size: cover;
+}
 
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
-
-.rules-col {
-
+.card-header p {
+  font-size: 34px;
+}
+.rules {
+  font-size: 14px;
 }
 
 .score-row {
