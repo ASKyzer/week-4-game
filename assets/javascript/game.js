@@ -9,10 +9,10 @@ var losses = 0;
 // randomly generated number of pokemons to collect
 var numToReach;
 // values of each character
-var batzValues;
-var kittyValue;
-var penguinValue;
-var keroppiValue;
+var dragonValues;
+var wartortleValue;
+var banetteValue;
+var kobraValue;
 // ninimum and maximum character values
 var minCharNum = 1;
 var maxCharNum = 12;
@@ -29,17 +29,17 @@ var runningTotal = 0;
   // that value is then printed on the screen
   $('#monstersToCollect').html(numToReach);
   // randomly generated number of each character
-  batzValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
-  kittyValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
-  penguinValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
-  keroppiValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+  dragonValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+  wartortleValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+  banetteValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+  kobraValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
 
 ////////////////
 // FUNCTIONS //
 //////////////
 
 // to set all variables back to zero
-  function restart(){
+  var restart = function(){
 
     $('#totalMonsters').html("0");
 
@@ -48,25 +48,25 @@ var runningTotal = 0;
       // that value is then printed on the screen
     $('#monstersToCollect').html(numToReach);
 
-    batzValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
-    kittyValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
-    penguinValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
-    keroppiValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+    dragonValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+    wartortleValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+    banetteValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
+    kobraValue = Math.floor(Math.random()*(maxCharNum-minCharNum+1)+minCharNum);
 
     ///////////////////
     // FOR DEBUGGING //
     //////////////////
 
     console.log(numToReach);
-    console.log(batzValue);
-    console.log(kittyValue);
-    console.log(penguinValue);
-    console.log(keroppiValue);
+    console.log(dragonValue);
+    console.log(wartortleValue);
+    console.log(banetteValue);
+    console.log(kobraValue);
 
   };
 
 // Comparing the score to see who Wins
-function compareScore() {
+  var compareScore = function() {
   if (runningTotal == numToReach) {
     alert("Congratulations!  You've won this round.");
     wins++;
@@ -88,7 +88,7 @@ function compareScore() {
   // click on a charactor to get random values //
   $("#dragon").on("click", function(){
     // adds the value of the character to the new total
-    runningTotal = runningTotal + batzValue;
+    runningTotal = runningTotal + dragonValue;
     // outputs to DOM
     $('#totalMonsters').html(runningTotal);
     // calls on the function to evaluate win or loss
@@ -96,19 +96,19 @@ function compareScore() {
   })
   // the events below are the same as described above
   $("#wartortle").on("click", function(){
-    runningTotal = runningTotal + kittyValue;
+    runningTotal = runningTotal + wartortleValue;
     $('#totalMonsters').html(runningTotal);
     compareScore();
   })
 
   $("#banette").on("click", function(){
-    runningTotal = runningTotal + penguinValue;
+    runningTotal = runningTotal + banetteValue;
     $('#totalMonsters').html(runningTotal);
     compareScore();
   })
 
   $("#kobra").on("click", function(){
-    runningTotal = runningTotal + keroppiValue;
+    runningTotal = runningTotal + kobraValue;
     $('#totalMonsters').html(runningTotal);
     compareScore();
   })
@@ -118,10 +118,10 @@ function compareScore() {
 //////////////////
 
 console.log(numToReach);
-console.log(batzValue);
-console.log(kittyValue);
-console.log(penguinValue);
-console.log(keroppiValue);
+console.log(dragonValue);
+console.log(wartortleValue);
+console.log(banetteValue);
+console.log(kobraValue);
 
 
 });

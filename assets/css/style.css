@@ -5,10 +5,6 @@ body {
   background-size: cover;
 }
 
-.container {
-  height: 100wh;
-}
-
 .card {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -38,9 +34,8 @@ body {
   background-color: rgba(255,211,61,0.5);
   border: 1px solid #ffd33d;
   border-radius: 50%;
-  font-size: 55px;
-  height: 120px;
-  line-height: 120px;
-  width: 120px;
-
+  font-size: 44px;
+  height: 90px;
+  line-height: 90px;
+  width: 90px;
 }

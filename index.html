@@ -5,10 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Added link to the jQuery Library -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
-    <!-- Reset CSS -->
+      <!-- Reset CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -52,24 +49,33 @@
           <img class="img img-fluid img-responsive" src="assets/images/pika.png" alt="Picachew">
         </div>
       </div>
-      <div class="row score-row">
-        <div  class="col to-collect-col" align=center>
-          <p class="score-header">Wins:</p>
-          <p id="wins" class="score"></p>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div  class="col to-collect-col" align=center>
+              <p class="score-header">Wins:</p>
+              <p id="wins" class="score"></p>
+            </div>
+            <div  class="col to-collect-col" align=center>
+              <p class="score-header">To collect:</p>
+              <p id="monstersToCollect" class="score"></p>
+            </div>
+          </div>
         </div>
-        <div  class="col to-collect-col" align=center>
-          <p class="score-header">To collect:</p>
-          <p id="monstersToCollect" class="score"></p>
-        </div>
-        <div  class="col to-collect-col" align=center>
-          <p class="score-header">Total collected:</p>
-          <p id="totalMonsters" class="score">0</p>
-        </div>
-        <div  class="col to-collect-col" align=center>
-          <p class="score-header">Losses:</p>
-          <p id="losses" class="score"></p>
+        <div class="col">
+          <div class="row">
+            <div  class="col to-collect-col flex-first" align=center>
+              <p class="score-header">Total collected:</p>
+              <p id="totalMonsters" class="score">0</p>
+            </div>
+            <div  class="col to-collect-col flex-last" align=center>
+              <p class="score-header">Losses:</p>
+              <p id="losses" class="score"></p>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <img id="dragon" class="img img-responsive img-fluid pokemon-pic" src="assets/images/dragon.png" alt="Dragon">
@@ -84,6 +90,7 @@
           <img id="kobra" class="img img-responsive img-fluid pokemon-pic" src="assets/images/cobra.png" alt="Kobra">
         </div>
       </div>
+
     </div>
 
     <!-- Optional JavaScript -->
